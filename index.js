@@ -21,7 +21,9 @@ app.use(cors({
 const rootDir = path.resolve();
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(rootDir, "dist")));
-    app.get("*", (req, res) => {
+
+    // Fixed catch-all route - use proper wildcard syntax
+    app.get("/*", (req, res) => {
         res.sendFile(path.join(rootDir, "dist", "index.html"));
     });
 }
