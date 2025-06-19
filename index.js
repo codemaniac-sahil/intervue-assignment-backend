@@ -12,7 +12,7 @@ const server = http.createServer(app);
 
 // CORS configuration
 app.use(cors({
-    origin: ["http://localhost:5173", "https://intervue-polling-cd9h.vercel.app"],
+    origin: ["http://localhost:5173", "https://intervue-assignment-frontend.vercel.app"],
     methods: ["GET", "POST"],
     credentials: true,
 }));
@@ -21,7 +21,7 @@ app.use(cors({
 // Initialize Socket.IO
 const io = new Server(server, {
     cors: {
-        origin: ["http://localhost:5173", "https://intervue-polling-cd9h.vercel.app"],
+        origin: ["http://localhost:5173", "https://intervue-assignment-frontend.vercel.app"],
         methods: ["GET", "POST"],
         credentials: true,
     },
